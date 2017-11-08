@@ -391,7 +391,7 @@ func (v *VM) Customize(computername, script string, changeSid bool) (Task, error
 		Info:                "Specifies Guest OS Customization Settings",
 		Enabled:             true,
 		ComputerName:        computername,
-		CustomizationScript: script,
+		CustomizationScript: &types.CustomizationScript{Data: script},
 		ChangeSid:           false,
 	}
 
